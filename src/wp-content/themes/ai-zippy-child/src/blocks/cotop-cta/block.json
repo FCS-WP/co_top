@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-cta",
+	"version": "1.0.0",
+	"title": "CO-TOP CTA",
+	"category": "ai-zippy",
+	"icon": "megaphone",
+	"description": "CO-TOP navy call-to-action banner.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"backgroundWord": { "type": "string", "default": "DESIGN" },
+		"label": { "type": "string", "default": "Start Your Project" },
+		"title": { "type": "string", "default": "Ready to Transform Your Space?" },
+		"body": { "type": "string", "default": "Speak with our product specialists. We'll help you find the perfect material, plan your project, and deliver results that exceed expectations." },
+		"buttonText": { "type": "string", "default": "Request a Consultation" },
+		"buttonUrl": { "type": "string", "default": "/contact" }
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

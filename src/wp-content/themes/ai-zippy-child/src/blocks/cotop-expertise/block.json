@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-expertise",
+	"version": "1.0.0",
+	"title": "CO-TOP Expertise",
+	"category": "ai-zippy",
+	"icon": "portfolio",
+	"description": "CO-TOP expertise cards.",
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"attributes": {
+		"label": { "type": "string", "default": "Expertise & Experience" },
+		"title": { "type": "string", "default": "What We Do Best" },
+		"body": { "type": "string", "default": "Our capabilities span the full lifecycle of a surface project — from material selection and custom fabrication to professional installation and aftercare." },
+		"items": {
+			"type": "array",
+			"default": [
+				{ "icon": "home", "title": "Residential Projects", "body": "Kitchen countertops, bathroom vanities, feature walls, and custom furniture surfaces — crafted to exact specification for homeowners and interior designers." },
+				{ "icon": "commercial", "title": "Commercial Installations", "body": "Reception counters, office workstations, retail fitouts, and hospitality surfaces — delivered to commercial schedules with minimal disruption." },
+				{ "icon": "tool", "title": "Custom Fabrication", "body": "Our in-house fabrication workshop handles complex shapes, curved edges, integrated sinks, and bespoke design elements with precision CNC and hand-finishing." },
+				{ "icon": "shield", "title": "After-Sales & Maintenance", "body": "Dedicated maintenance support, repair services, and care guides to protect your investment for the long term after every installation." }
+			]
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

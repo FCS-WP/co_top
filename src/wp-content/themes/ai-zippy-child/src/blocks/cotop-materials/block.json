@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-materials",
+	"version": "1.0.0",
+	"title": "CO-TOP Materials",
+	"category": "ai-zippy",
+	"icon": "grid-view",
+	"description": "CO-TOP premium surface material cards.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"label": { "type": "string", "default": "Our Collections" },
+		"title": { "type": "string", "default": "Premium Surface\nMaterials" },
+		"intro": { "type": "string", "default": "We source and supply the world's finest surface materials, each selected for exceptional quality, durability, and aesthetic versatility." },
+		"cards": {
+			"type": "array",
+			"default": [
+				{ "type": "Hanstone · Cresto", "name": "Quartz Stone", "desc": "Engineered for resilience and beauty with a refined natural aesthetic.", "from": "$280", "unit": "/ sqft installed", "note": "Supply only from $180", "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80", "url": "/products#quartz" },
+				{ "type": "Hanex · Cresto", "name": "Solid Surface", "desc": "Seamless, hygienic, and endlessly customisable for any space.", "from": "$320", "unit": "/ sqft installed", "note": "Supply only from $200", "image": "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80", "url": "/products#solid" },
+				{ "type": "Mica", "name": "Sintered Stone", "desc": "Ultra-compact and UV-stable — the new standard in luxury surfaces.", "from": "$420", "unit": "/ sqft installed", "note": "Supply only from $280", "image": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=800&q=80", "url": "/products#sintered" }
+			]
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

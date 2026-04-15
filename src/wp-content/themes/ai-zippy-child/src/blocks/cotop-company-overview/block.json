@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-company-overview",
+	"version": "1.0.0",
+	"title": "CO-TOP Company Overview",
+	"category": "ai-zippy",
+	"icon": "building",
+	"description": "CO-TOP about overview with copy, stats, and image.",
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"attributes": {
+		"label": { "type": "string", "default": "Company Overview" },
+		"title": { "type": "string", "default": "Built on Craftsmanship\n& Commitment" },
+		"body": { "type": "string", "default": "Founded in 1994, CO-TOP Marketing Pte Ltd has grown from a specialist surface supplier into one of Singapore's most trusted full-service fabrication and installation companies. We serve residential, commercial, and hospitality sectors with equal dedication.\n\nOur philosophy is simple: every surface we touch should be a testament to the quality of the materials and the skill of our craftsmen. Whether it's a custom kitchen countertop or a large-scale commercial cladding project, we bring the same precision and care.\n\nWith a team of dedicated specialists across sales, fabrication, and installation, we pride ourselves on delivering end-to-end solutions that remove the complexity from your project and replace it with confidence." },
+		"buttonText": { "type": "string", "default": "Our Expertise →" },
+		"buttonUrl": { "type": "string", "default": "#expertise" },
+		"imageId": { "type": "number", "default": 0 },
+		"imageUrl": { "type": "string", "default": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=800&q=80" },
+		"stats": {
+			"type": "array",
+			"default": [
+				{ "number": "30+", "label": "Years in Business" },
+				{ "number": "5", "label": "Premium Brands" },
+				{ "number": "1000s", "label": "Projects Delivered" },
+				{ "number": "100%", "label": "In-House Services" }
+			]
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

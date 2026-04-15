@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-clients",
+	"version": "1.0.0",
+	"title": "CO-TOP Clients",
+	"category": "ai-zippy",
+	"icon": "groups",
+	"description": "CO-TOP clientele chip list.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"label": { "type": "string", "default": "Trusted By" },
+		"title": { "type": "string", "default": "Our Clientele" },
+		"body": { "type": "string", "default": "Proud to have served leading developers, contractors, designers, and homeowners across Singapore for over three decades." },
+		"items": {
+			"type": "array",
+			"default": [
+				"Residential Developers",
+				"Interior Designers",
+				"Commercial Contractors",
+				"Hospitality Groups",
+				"Government Projects",
+				"Renovation Firms"
+			]
+		},
+		"itemsText": { "type": "string", "default": "Residential Developers\nInterior Designers\nCommercial Contractors\nHospitality Groups\nGovernment Projects\nRenovation Firms" }
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

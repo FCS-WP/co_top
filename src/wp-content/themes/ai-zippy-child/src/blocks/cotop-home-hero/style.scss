@@ -1,0 +1,167 @@
+$cth-navy: var(--wp--preset--color--cotop-navy, #1b4181);
+$cth-navy-dark: var(--wp--preset--color--cotop-navy-dark, #132e5e);
+$cth-navy-deep: var(--wp--preset--color--cotop-navy-deep, #0d1f3c);
+$cth-gold: var(--wp--preset--color--cotop-gold, #b8973a);
+$cth-gold-light: var(--wp--preset--color--cotop-gold-light, #d4b060);
+$cth-serif: var(--wp--preset--font-family--cotop-serif, "Cormorant Garamond", Georgia, serif);
+$cth-sans: var(--wp--preset--font-family--cotop-sans, "DM Sans", system-ui, sans-serif);
+
+.wp-block-ai-zippy-cotop-home-hero.cth {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	min-height: calc(100vh - 72px);
+	padding: 4rem 4rem 5rem;
+	overflow: hidden;
+	background: $cth-navy-deep;
+	color: #fff;
+	font-family: $cth-sans;
+}
+
+.cth__bg {
+	position: absolute;
+	inset: 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(to top, rgba(13, 31, 60, 0.96) 0%, rgba(13, 31, 60, 0.65) 50%, rgba(13, 31, 60, 0.3) 100%);
+	}
+}
+
+.cth__content {
+	position: relative;
+	z-index: 2;
+}
+
+.cth__tag {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1.25rem;
+	color: $cth-gold-light;
+	font-size: 0.68rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 36px;
+		height: 1px;
+		background: $cth-gold-light;
+	}
+}
+
+.cth__title {
+	max-width: 760px;
+	margin: 0 0 1.75rem;
+	color: #fff;
+	font-family: $cth-serif;
+	font-size: clamp(3.2rem, 6.5vw, 6.5rem);
+	font-weight: 300;
+	line-height: 1.05;
+	letter-spacing: 0;
+
+	em {
+		color: $cth-gold-light;
+		font-style: italic;
+	}
+}
+
+.cth__sub {
+	max-width: 400px;
+	margin: 0 0 2.5rem;
+	color: rgba(255, 255, 255, 0.65);
+	font-size: 0.9rem;
+	line-height: 1.85;
+}
+
+.cth__actions {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	flex-wrap: wrap;
+}
+
+.cth__btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 48px;
+	padding: 0.9rem 2.25rem;
+	border: 0;
+	font-family: $cth-sans;
+	font-size: 0.78rem;
+	letter-spacing: 0.1em;
+	line-height: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background 0.2s, color 0.2s;
+}
+
+.cth__btn--primary {
+	background: $cth-navy;
+	color: #fff;
+
+	&:hover {
+		background: $cth-navy-dark;
+		color: #fff;
+	}
+}
+
+.cth__btn--ghost {
+	padding: 0.9rem;
+	background: transparent;
+	color: rgba(255, 255, 255, 0.6);
+
+	&:hover {
+		color: #fff;
+	}
+}
+
+.cth__stats {
+	position: absolute;
+	right: 4rem;
+	bottom: 5rem;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.cth__stat {
+	text-align: right;
+}
+
+.cth__stat-num {
+	display: block;
+	color: #fff;
+	font-family: $cth-serif;
+	font-size: 2.4rem;
+	font-weight: 300;
+	line-height: 1;
+}
+
+.cth__stat-label {
+	color: rgba(255, 255, 255, 0.45);
+	font-size: 0.62rem;
+	letter-spacing: 0.16em;
+	text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+	.wp-block-ai-zippy-cotop-home-hero.cth {
+		min-height: calc(100vh - 72px);
+		padding: 2rem 1.5rem 3rem;
+	}
+
+	.cth__stats {
+		display: none;
+	}
+}

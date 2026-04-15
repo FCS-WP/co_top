@@ -1,0 +1,69 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-product-brands",
+	"version": "1.0.0",
+	"title": "CO-TOP Product Brands",
+	"category": "ai-zippy",
+	"icon": "products",
+	"description": "CO-TOP product brand grid for Quartz or Solid Surface sections.",
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"attributes": {
+		"variant": { "type": "string", "default": "quartz", "enum": ["quartz", "solid"] },
+		"quartzCards": {
+			"type": "array",
+			"default": [
+				{
+					"label": "Premium Quartz",
+					"name": "Hanstone Quartz",
+					"desc": "A globally recognised quartz brand offering 90+ colours with consistent pattern and superior resistance to scratches, stains, and heat. Ideal for kitchen countertops and bathroom vanities.",
+					"image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80",
+					"price": "",
+					"unit": "",
+					"note": "",
+					"features": ["Scratch Resistant", "Non-Porous", "90+ Colours", "NSF Certified"]
+				},
+				{
+					"label": "Value Quartz",
+					"name": "Cresto Quartz",
+					"desc": "An accessible yet premium quartz range offering excellent durability and a wide colour palette. Delivers exceptional value without compromising on performance or aesthetics.",
+					"image": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=800&q=80",
+					"price": "$240",
+					"unit": "/ sqft installed",
+					"note": "Supply $120–$160/sqft",
+					"features": ["Stain Resistant", "Easy Clean", "Wide Palette", "Commercial Grade"]
+				}
+			]
+		},
+		"solidCards": {
+			"type": "array",
+			"default": [
+				{
+					"label": "Premium Solid Surface",
+					"name": "Hanex Solid Surface",
+					"desc": "One of Korea's most trusted solid surface brands. Hanex offers exceptional thermoformability - curved shapes, seamless joins, and integrated sink bowls. Perfect for reception counters, vanities, and bespoke furniture.",
+					"image": "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80",
+					"price": "$380",
+					"unit": "/ sqft installed",
+					"note": "Supply $200-$260/sqft",
+					"features": ["Thermoformable", "Seamless Joins", "Repairable", "Anti-Bacterial"]
+				},
+				{
+					"label": "Value Solid Surface",
+					"name": "Cresto Solid Surface",
+					"desc": "A versatile solid surface range that balances cost-effectiveness with quality. Delivers consistent performance across residential and light commercial applications.",
+					"image": "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=800&q=80",
+					"price": "$280",
+					"unit": "/ sqft installed",
+					"note": "Supply $140-$180/sqft",
+					"features": ["Mouldable", "Non-Porous", "Easy Repair", "Multiple Finishes"]
+				}
+			]
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

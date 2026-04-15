@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-advantages",
+	"version": "1.0.0",
+	"title": "CO-TOP Advantages",
+	"category": "ai-zippy",
+	"icon": "awards",
+	"description": "CO-TOP numbered advantage grid.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"label": { "type": "string", "default": "Why CO-TOP" },
+		"title": { "type": "string", "default": "The CO-TOP Advantage" },
+		"items": {
+			"type": "array",
+			"default": [
+				{ "number": "01", "title": "Full-Service Expertise", "body": "From supply and fabrication to installation, every step handled in-house for seamless quality." },
+				{ "number": "02", "title": "Skilled Workforce", "body": "Decades of combined experience across our sales, fabrication, and installation teams." },
+				{ "number": "03", "title": "Strong Logistics", "body": "Robust logistics backbone for consistent high performance and timely delivery." },
+				{ "number": "04", "title": "JIT Production", "body": "Just-in-time output for agile handling of projects at any scale." },
+				{ "number": "05", "title": "Fine Workmanship", "body": "Exceptional craftsmanship meeting even the most stringent client demands." },
+				{ "number": "06", "title": "After-Sales Service", "body": "Reliable post-installation support ensuring complete and lasting satisfaction." }
+			]
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -2,7 +2,85 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"settings": {
-		"appearanceTools": true
+		"appearanceTools": true,
+		"color": {
+			"palette": [
+				{
+					"slug": "cotop-navy",
+					"color": "#1B4181",
+					"name": "CO-TOP Navy"
+				},
+				{
+					"slug": "cotop-navy-dark",
+					"color": "#132E5E",
+					"name": "CO-TOP Navy Dark"
+				},
+				{
+					"slug": "cotop-navy-deep",
+					"color": "#0D1F3C",
+					"name": "CO-TOP Navy Deep"
+				},
+				{
+					"slug": "cotop-navy-mid",
+					"color": "#2A5298",
+					"name": "CO-TOP Navy Mid"
+				},
+				{
+					"slug": "cotop-navy-light",
+					"color": "#4A72B8",
+					"name": "CO-TOP Navy Light"
+				},
+				{
+					"slug": "cotop-navy-pale",
+					"color": "#D8E4F5",
+					"name": "CO-TOP Navy Pale"
+				},
+				{
+					"slug": "cotop-navy-tint",
+					"color": "#EEF3FB",
+					"name": "CO-TOP Navy Tint"
+				},
+				{
+					"slug": "cotop-bg",
+					"color": "#F4F6FA",
+					"name": "CO-TOP Background"
+				},
+				{
+					"slug": "cotop-text-muted",
+					"color": "#6B7FA8",
+					"name": "CO-TOP Text Muted"
+				},
+				{
+					"slug": "cotop-text-mid",
+					"color": "#2E4472",
+					"name": "CO-TOP Text Mid"
+				},
+				{
+					"slug": "cotop-gold",
+					"color": "#B8973A",
+					"name": "CO-TOP Gold"
+				},
+				{
+					"slug": "cotop-gold-light",
+					"color": "#D4B060",
+					"name": "CO-TOP Gold Light"
+				}
+			]
+		},
+		"typography": {
+			"fontFamilies": [
+				{
+					"fontFamily": "'DM Sans', system-ui, sans-serif",
+					"slug": "cotop-sans",
+					"name": "CO-TOP Sans"
+				},
+				{
+					"fontFamily": "'Cormorant Garamond', Georgia, serif",
+					"slug": "cotop-serif",
+					"name": "CO-TOP Serif"
+				}
+			]
+		}
 	},
 	"styles": {}
 }

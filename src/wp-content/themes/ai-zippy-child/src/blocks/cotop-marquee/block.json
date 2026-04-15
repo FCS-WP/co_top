@@ -1,0 +1,37 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-marquee",
+	"version": "1.0.0",
+	"title": "CO-TOP Marquee",
+	"category": "ai-zippy",
+	"icon": "editor-textcolor",
+	"description": "CO-TOP animated marquee line.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"items": {
+			"type": "array",
+			"default": [
+				"Quartz Surface",
+				"Solid Surface",
+				"Sintered Stone",
+				"Kitchen Countertops",
+				"Wall Claddings",
+				"Custom Fabrication",
+				"Professional Installation"
+			]
+		},
+		"itemsText": {
+			"type": "string",
+			"default": "Quartz Surface\nSolid Surface\nSintered Stone\nKitchen Countertops\nWall Claddings\nCustom Fabrication\nProfessional Installation"
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

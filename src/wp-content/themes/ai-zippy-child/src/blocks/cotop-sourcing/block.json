@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-sourcing",
+	"version": "1.0.0",
+	"title": "CO-TOP Sourcing",
+	"category": "ai-zippy",
+	"icon": "admin-site-alt3",
+	"description": "CO-TOP sourcing and import advantage section.",
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"attributes": {
+		"label": { "type": "string", "default": "Sourcing & Import Advantage" },
+		"title": { "type": "string", "default": "Global Materials,\nLocal Expertise" },
+		"imageId": { "type": "number", "default": 0 },
+		"imageUrl": { "type": "string", "default": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=800&q=80" },
+		"items": {
+			"type": "array",
+			"default": [
+				{ "number": "01", "title": "Direct Brand Partnerships", "body": "We are authorised distributors for Hanex, Hanstone, Cresto, and Mica — giving us direct access to full product ranges, competitive pricing, and technical support." },
+				{ "number": "02", "title": "Consistent Stock Availability", "body": "Our strong import pipeline ensures popular colours and materials are consistently available, reducing lead times for your project." },
+				{ "number": "03", "title": "Quality Assured Materials", "body": "Every material meets international quality standards, with full product warranties backed directly by the original manufacturers." },
+				{ "number": "04", "title": "Wide Selection", "body": "From classic whites and marbles to bold industrial tones — our curated palette spans hundreds of colours across all three material categories." }
+			]
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

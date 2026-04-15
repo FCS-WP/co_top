@@ -1,0 +1,117 @@
+$ctex-bg: var(--wp--preset--color--cotop-bg, #f4f6fa);
+$ctex-navy: var(--wp--preset--color--cotop-navy, #1b4181);
+$ctex-navy-dark: var(--wp--preset--color--cotop-navy-dark, #132e5e);
+$ctex-navy-tint: var(--wp--preset--color--cotop-navy-tint, #eef3fb);
+$ctex-navy-pale: var(--wp--preset--color--cotop-navy-pale, #d8e4f5);
+$ctex-border: rgba(27, 65, 129, 0.12);
+$ctex-gold: var(--wp--preset--color--cotop-gold, #b8973a);
+$ctex-muted: var(--wp--preset--color--cotop-text-muted, #6b7fa8);
+$ctex-serif: var(--wp--preset--font-family--cotop-serif, "Cormorant Garamond", Georgia, serif);
+$ctex-sans: var(--wp--preset--font-family--cotop-sans, "DM Sans", system-ui, sans-serif);
+
+.wp-block-ai-zippy-cotop-expertise.ctex {
+	padding: 6rem 4rem;
+	background: $ctex-bg;
+	font-family: $ctex-sans;
+}
+
+.ctex__label {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	color: $ctex-gold;
+	font-size: 0.68rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+
+	&::before {
+		content: "";
+		width: 28px;
+		height: 1px;
+		background: $ctex-gold;
+	}
+}
+
+.ctex__title {
+	margin: 0 0 1.5rem;
+	color: $ctex-navy-dark;
+	font-family: $ctex-serif;
+	font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+	font-weight: 300;
+	line-height: 1.15;
+	letter-spacing: 0;
+}
+
+.ctex__intro {
+	max-width: 520px;
+	margin: 0;
+	color: $ctex-muted;
+	font-size: 0.9rem;
+	line-height: 1.85;
+}
+
+.ctex__grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1.5rem;
+	margin-top: 3rem;
+}
+
+.ctex__card {
+	padding: 2.5rem;
+	border: 1px solid $ctex-border;
+	background: #fff;
+	transition: border-color 0.3s, box-shadow 0.3s;
+
+	&:hover {
+		border-color: var(--wp--preset--color--cotop-navy-light, #4a72b8);
+		box-shadow: 0 4px 20px rgba(27, 65, 129, 0.08);
+	}
+}
+
+.ctex__icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	margin-bottom: 1.25rem;
+	border: 1px solid $ctex-navy-pale;
+	background: $ctex-navy-tint;
+
+	svg {
+		width: 20px;
+		height: 20px;
+		fill: none;
+		stroke: $ctex-navy;
+		stroke-width: 1.5;
+	}
+}
+
+.ctex__card-title {
+	margin-bottom: 0.65rem;
+	color: $ctex-navy-dark;
+	font-family: $ctex-serif;
+	font-size: 1.2rem;
+	font-weight: 400;
+}
+
+.ctex__body {
+	margin: 0;
+	color: $ctex-muted;
+	font-size: 0.82rem;
+	line-height: 1.85;
+}
+
+@media (max-width: 1024px) {
+	.ctex__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	.wp-block-ai-zippy-cotop-expertise.ctex {
+		padding: 3.5rem 1.5rem;
+	}
+}

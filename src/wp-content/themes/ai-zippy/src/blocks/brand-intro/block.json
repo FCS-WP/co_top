@@ -37,6 +37,10 @@
 			"type": "string",
 			"default": "Kalindi's Kuzines began in 2016 with one simple idea to share honest, home-cooked vegetarian food made with care. What started in a small home kitchen has grown into a trusted name for fresh, homestyle Indian meals across Singapore..."
 		},
+		"highlightsText": {
+			"type": "string",
+			"default": "Freshly cooked daily\nNo preservatives\nTrusted by families across Singapore"
+		},
 		"linkText": {
 			"type": "string",
 			"default": "Learn more"

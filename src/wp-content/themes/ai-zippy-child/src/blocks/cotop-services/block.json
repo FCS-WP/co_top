@@ -1,0 +1,32 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-services",
+	"version": "1.0.0",
+	"title": "CO-TOP Services",
+	"category": "ai-zippy",
+	"icon": "list-view",
+	"description": "CO-TOP end-to-end service steps.",
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"attributes": {
+		"label": { "type": "string", "default": "Services Overview" },
+		"title": { "type": "string", "default": "End-to-End Surface Solutions" },
+		"body": { "type": "string", "default": "Our commitment covers every stage — from your first enquiry to long after installation." },
+		"items": {
+			"type": "array",
+			"default": [
+				{ "tag": "Step 01", "title": "Consultation & Selection", "body": "We guide you through our full material library, helping you choose the right surface for your aesthetic, budget, and functional requirements." },
+				{ "tag": "Step 02", "title": "Measurement & Templating", "body": "Our specialists visit your site to take precise measurements and create templates, ensuring a perfect fit every time." },
+				{ "tag": "Step 03", "title": "Custom Fabrication", "body": "Surfaces are cut, shaped, and finished in our workshop using CNC machinery and skilled craftsmanship to exact specifications." },
+				{ "tag": "Step 04", "title": "Professional Installation", "body": "Our installation team delivers and fits your surfaces with precision, leaving your space clean and ready to enjoy." },
+				{ "tag": "Step 05", "title": "Quality Inspection", "body": "Every completed project undergoes a thorough quality check before handover, ensuring the finish meets our exacting standards." },
+				{ "tag": "Step 06", "title": "After-Sales Support", "body": "We remain available post-installation for maintenance advice, repairs, and any follow-up needs." }
+			]
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

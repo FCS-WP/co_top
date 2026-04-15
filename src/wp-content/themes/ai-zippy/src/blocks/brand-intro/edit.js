@@ -1,5 +1,5 @@
 import { useBlockProps, MediaUpload, RichText, InspectorControls } from "@wordpress/block-editor";
-import { PanelBody, Button, TextControl, ColorPicker } from "@wordpress/components";
+import { PanelBody, Button, TextControl, ColorPicker, TextareaControl } from "@wordpress/components";
 
 export default function Edit({ attributes, setAttributes }) {
 	const {
@@ -9,10 +9,12 @@ export default function Edit({ attributes, setAttributes }) {
 		subtitle,
 		brandName,
 		story,
+		highlightsText,
 		linkText,
 		linkUrl,
 		bgColor,
 	} = attributes;
+	const highlights = (highlightsText || "").split(/\r\n|\r|\n/).filter(Boolean);
 
 	const blockProps = useBlockProps({ className: "bi" });
 
@@ -68,6 +70,14 @@ export default function Edit({ attributes, setAttributes }) {
 					<ColorPicker
 						color={bgColor}
 						onChangeComplete={(val) => setAttributes({ bgColor: val.hex })}
+					/>
+				</PanelBody>
+				<PanelBody title="Highlights (Repeat Field)" initialOpen={false}>
+					<TextareaControl
+						label="One item per line"
+						value={highlightsText}
+						onChange={(val) => setAttributes({ highlightsText: val })}
+						rows={6}
 					/>
 				</PanelBody>
 			</InspectorControls>
@@ -130,6 +140,13 @@ export default function Edit({ attributes, setAttributes }) {
 						onChange={(val) => setAttributes({ story: val })}
 						placeholder="Brand story..."
 					/>
+					{highlights.length > 0 && (
+						<ul className="bi__highlights">
+							{highlights.map((item, index) => (
+								<li key={index}>{item}</li>
+							))}
+						</ul>
+					)}
 					{linkText && (
 						<span className="bi__link">{linkText} &rarr;</span>
 					)}
