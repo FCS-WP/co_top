@@ -1,0 +1,131 @@
+$ctadv-bg: var(--wp--preset--color--cotop-bg, #f4f6fa);
+$ctadv-white: #fff;
+$ctadv-navy-dark: var(--wp--preset--color--cotop-navy-dark, #132e5e);
+$ctadv-navy-tint: var(--wp--preset--color--cotop-navy-tint, #eef3fb);
+$ctadv-navy-pale: var(--wp--preset--color--cotop-navy-pale, #d8e4f5);
+$ctadv-border: rgba(27, 65, 129, 0.12);
+$ctadv-gold: var(--wp--preset--color--cotop-gold, #b8973a);
+$ctadv-muted: var(--wp--preset--color--cotop-text-muted, #6b7fa8);
+$ctadv-serif: var(--wp--preset--font-family--cotop-serif, "Cormorant Garamond", Georgia, serif);
+$ctadv-sans: var(--wp--preset--font-family--cotop-sans, "DM Sans", system-ui, sans-serif);
+
+.wp-block-ai-zippy-cotop-advantages.ctadv {
+	padding: 6rem 4rem;
+	background: $ctadv-bg;
+	font-family: $ctadv-sans;
+}
+
+.ctadv__label {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	color: $ctadv-gold;
+	font-size: 0.68rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+
+	&::before {
+		content: "";
+		width: 28px;
+		height: 1px;
+		background: $ctadv-gold;
+	}
+}
+
+.ctadv__title {
+	margin: 0 0 3rem;
+	color: $ctadv-navy-dark;
+	font-family: $ctadv-serif;
+	font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+	font-weight: 300;
+	line-height: 1.15;
+	letter-spacing: 0;
+}
+
+.ctadv__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	border: 1px solid $ctadv-border;
+}
+
+.ctadv__item {
+	padding: 2.75rem 2.25rem;
+	border-right: 1px solid $ctadv-border;
+	border-bottom: 1px solid $ctadv-border;
+	background: $ctadv-white;
+	transition: background 0.2s;
+
+	&:hover {
+		background: $ctadv-navy-tint;
+	}
+
+	&:nth-child(3n) {
+		border-right: 0;
+	}
+
+	&:nth-last-child(-n + 3) {
+		border-bottom: 0;
+	}
+}
+
+.ctadv__num {
+	display: block;
+	margin-bottom: 1rem;
+	color: $ctadv-navy-pale;
+	font-family: $ctadv-serif;
+	font-size: 2.8rem;
+	font-weight: 300;
+	line-height: 1;
+}
+
+.ctadv__item-title {
+	margin-bottom: 0.65rem;
+	color: $ctadv-navy-dark;
+	font-family: $ctadv-serif;
+	font-size: 1.15rem;
+	font-weight: 400;
+}
+
+.ctadv__body {
+	margin: 0;
+	color: $ctadv-muted;
+	font-size: 0.8rem;
+	line-height: 1.85;
+}
+
+@media (max-width: 1024px) {
+	.ctadv__grid {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.ctadv__item:nth-child(3n) {
+		border-right: 1px solid $ctadv-border;
+	}
+
+	.ctadv__item:nth-child(2n) {
+		border-right: 0;
+	}
+}
+
+@media (max-width: 768px) {
+	.wp-block-ai-zippy-cotop-advantages.ctadv {
+		padding: 3.5rem 1.5rem;
+	}
+
+	.ctadv__grid {
+		grid-template-columns: 1fr;
+	}
+
+	.ctadv__item,
+	.ctadv__item:nth-child(2n),
+	.ctadv__item:nth-child(3n),
+	.ctadv__item:nth-last-child(-n + 3) {
+		border-right: 0;
+		border-bottom: 1px solid $ctadv-border;
+	}
+
+	.ctadv__item:last-child {
+		border-bottom: 0;
+	}
+}

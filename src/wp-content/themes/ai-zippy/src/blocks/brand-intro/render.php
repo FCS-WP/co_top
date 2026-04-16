@@ -6,6 +6,11 @@ $tagline    = $attributes['tagline'] ?? '';
 $subtitle   = $attributes['subtitle'] ?? '';
 $brand_name = $attributes['brandName'] ?? '';
 $story      = $attributes['story'] ?? '';
+$highlights = array_values(
+    array_filter(
+        preg_split('/\r\n|\r|\n/', (string) ($attributes['highlightsText'] ?? '')) ?: []
+    )
+);
 $link_text  = $attributes['linkText'] ?? '';
 $link_url   = $attributes['linkUrl'] ?? '#';
 $hero_url   = $attributes['heroImageUrl'] ?? '';
@@ -35,6 +40,13 @@ $wrapper = get_block_wrapper_attributes(['class' => 'bi']);
 	<div class="bi__story" style="background-color: <?php echo esc_attr($bg_color); ?>">
 		<h2 class="bi__brand-name"><?php echo wp_kses_post($brand_name); ?></h2>
 		<p class="bi__story-text"><?php echo wp_kses_post($story); ?></p>
+		<?php if (!empty($highlights)) : ?>
+			<ul class="bi__highlights">
+				<?php foreach ($highlights as $item) : ?>
+					<li><?php echo esc_html($item); ?></li>
+				<?php endforeach; ?>
+			</ul>
+		<?php endif; ?>
 
 		<?php if ($link_text && $link_url) : ?>
 			<a class="bi__link" href="<?php echo esc_url($link_url); ?>">

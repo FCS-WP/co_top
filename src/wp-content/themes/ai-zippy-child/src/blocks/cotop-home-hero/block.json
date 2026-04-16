@@ -1,0 +1,77 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-home-hero",
+	"version": "1.0.0",
+	"title": "CO-TOP Home Hero",
+	"category": "ai-zippy",
+	"icon": "cover-image",
+	"description": "CO-TOP homepage hero with background image, CTA buttons, and stats.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"tagline": {
+			"type": "string",
+			"default": "Est. 1994 · Singapore"
+		},
+		"titleBefore": {
+			"type": "string",
+			"default": "Where"
+		},
+		"titleEmphasis": {
+			"type": "string",
+			"default": "Design"
+		},
+		"titleAfter": {
+			"type": "string",
+			"default": "Has No Limit"
+		},
+		"description": {
+			"type": "string",
+			"default": "Specialists in supply, fabrication and installation of solid surface, quartz, and sintered stone surfaces for residential and commercial spaces."
+		},
+		"primaryText": {
+			"type": "string",
+			"default": "Explore Products"
+		},
+		"primaryUrl": {
+			"type": "string",
+			"default": "/products"
+		},
+		"secondaryText": {
+			"type": "string",
+			"default": "Our Story ↗"
+		},
+		"secondaryUrl": {
+			"type": "string",
+			"default": "/about"
+		},
+		"backgroundUrl": {
+			"type": "string",
+			"default": "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1600&q=80"
+		},
+		"backgroundId": {
+			"type": "number",
+			"default": 0
+		},
+		"backgroundAlt": {
+			"type": "string",
+			"default": ""
+		},
+		"stats": {
+			"type": "array",
+			"default": [
+				{ "number": "30+", "label": "Years of Excellence" },
+				{ "number": "5", "label": "Premium Brands" },
+				{ "number": "1000s", "label": "Projects Completed" }
+			]
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

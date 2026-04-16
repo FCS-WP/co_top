@@ -1,0 +1,40 @@
+$ctm-navy-light: var(--wp--preset--color--cotop-navy-light, #4a72b8);
+$ctm-navy-tint: var(--wp--preset--color--cotop-navy-tint, #eef3fb);
+$ctm-border: rgba(27, 65, 129, 0.12);
+$ctm-gold: var(--wp--preset--color--cotop-gold, #b8973a);
+$ctm-serif: var(--wp--preset--font-family--cotop-serif, "Cormorant Garamond", Georgia, serif);
+
+.wp-block-ai-zippy-cotop-marquee.ctm {
+	overflow: hidden;
+	padding: 0.85rem 0;
+	border-top: 1px solid $ctm-border;
+	border-bottom: 1px solid $ctm-border;
+	background: $ctm-navy-tint;
+}
+
+.ctm__track {
+	display: flex;
+	width: max-content;
+	white-space: nowrap;
+	animation: ctmMarquee 26s linear infinite;
+	align-items: center;
+}
+
+.ctm__item {
+	padding: 0 2rem;
+	color: $ctm-navy-light;
+	font-family: $ctm-serif;
+	font-size: 0.82rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+
+.ctm__dot {
+	padding: 0 0.4rem;
+	color: $ctm-gold;
+}
+
+@keyframes ctmMarquee {
+	from { transform: translateX(0); }
+	to { transform: translateX(-50%); }
+}

@@ -85,6 +85,26 @@
 	margin: 0 auto 1.75rem;
 }
 
+.bi__highlights {
+	max-width: 520px;
+	margin: 0 auto 1.75rem;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 0.55rem;
+}
+
+.bi__highlights li {
+	font-size: 0.9rem;
+	line-height: 1.5;
+	color: var(--wp--preset--color--primary, #1a1a1a);
+}
+
+.bi__highlights li::before {
+	content: "• ";
+	color: var(--wp--preset--color--accent, #c8a97e);
+}
+
 .bi__link {
 	display: inline-block;
 	font-size: 0.85rem;

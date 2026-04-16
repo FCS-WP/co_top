@@ -1,0 +1,35 @@
+<!-- wp:group {"tagName":"header","metadata":{"name":"Site Header"},"className":"site-nav","layout":{"type":"default"}} -->
+<header class="wp-block-group site-nav">
+	<!-- wp:group {"className":"nav-container","layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center","flexWrap":"nowrap"}} -->
+	<div class="wp-block-group nav-container">
+		<!-- wp:group {"className":"nav-logo","layout":{"type":"flex","verticalAlignment":"center","flexWrap":"nowrap"}} -->
+		<div class="wp-block-group nav-logo">
+			<!-- wp:site-logo {"width":128,"shouldSyncIcon":false} /-->
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:navigation {"overlayMenu":"mobile","className":"nav-menu","layout":{"type":"flex","justifyContent":"left"},"style":{"spacing":{"blockGap":"1rem"}}} -->
+			<!-- wp:navigation-link {"label":"Home","url":"/","kind":"custom","isTopLevelLink":true} /-->
+			<!-- wp:navigation-submenu {"label":"About Us","url":"/about#company-overview","kind":"custom"} -->
+				<!-- wp:navigation-link {"label":"Company Overview","url":"/about#company-overview","kind":"custom","isTopLevelLink":true} /-->
+				<!-- wp:navigation-link {"label":"Our Expertise","url":"/about#our-expertise","kind":"custom","isTopLevelLink":true} /-->
+				<!-- wp:navigation-link {"label":"Services","url":"/about#our-services","kind":"custom","isTopLevelLink":true} /-->
+			<!-- /wp:navigation-submenu -->
+			<!-- wp:navigation-submenu {"label":"Products","url":"/products#quartz-stone","kind":"custom"} -->
+				<!-- wp:navigation-link {"label":"Quartz Stone","url":"/products#quartz-stone","kind":"custom","isTopLevelLink":true} /-->
+				<!-- wp:navigation-link {"label":"Solid Surface","url":"/products#solid-surface","kind":"custom","isTopLevelLink":true} /-->
+				<!-- wp:navigation-link {"label":"Sintered Stone","url":"/products#sintered-stone","kind":"custom","isTopLevelLink":true} /-->
+			<!-- /wp:navigation-submenu -->
+		<!-- /wp:navigation -->
+
+		<!-- wp:group {"className":"nav-cta","layout":{"type":"flex","verticalAlignment":"center","flexWrap":"nowrap"}} -->
+		<div class="wp-block-group nav-cta">
+			<!-- wp:paragraph -->
+			<p><a class="btn btn-primary" href="/contact">Get a Quote</a></p>
+			<!-- /wp:paragraph -->
+		</div>
+		<!-- /wp:group -->
+	</div>
+	<!-- /wp:group -->
+</header>
+<!-- /wp:group -->

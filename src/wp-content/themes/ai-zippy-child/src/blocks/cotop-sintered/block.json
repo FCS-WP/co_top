@@ -1,0 +1,31 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-sintered",
+	"version": "1.0.0",
+	"title": "CO-TOP Sintered Stone",
+	"category": "ai-zippy",
+	"icon": "images-alt2",
+	"description": "CO-TOP sintered stone section with hero image and cards.",
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"attributes": {
+		"label": { "type": "string", "default": "Sintered Stone" },
+		"title": { "type": "string", "default": "The New Standard\nin Luxury Surfaces" },
+		"body": { "type": "string", "default": "Ultra-compact sintered stone is produced at extreme heat and pressure — virtually impervious to heat, UV, staining, and scratching indoors and outdoors." },
+		"imageId": { "type": "number", "default": 0 },
+		"imageUrl": { "type": "string", "default": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=1400&q=80" },
+		"items": {
+			"type": "array",
+			"default": [
+				{ "label": "Sintered Stone", "name": "Mica — Kitchen", "body": "Withstands direct heat from pots and pans. The go-to for modern open-plan kitchens.", "price": "$480", "unit": "/ sqft installed", "image": "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=600&q=80", "features": ["Heat Proof", "Scratch Resistant"] },
+				{ "label": "Sintered Stone", "name": "Mica — Bathroom", "body": "Moisture-proof and UV-stable — seamless, grout-free vanity surfaces with minimal upkeep.", "price": "$460", "unit": "/ sqft installed", "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80", "features": ["Waterproof", "Easy Clean"] },
+				{ "label": "Sintered Stone", "name": "Mica — Outdoor", "body": "UV and frost resistant. Ideal for alfresco dining surfaces, terraces, and pool surrounds.", "price": "$520", "unit": "/ sqft installed", "image": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=600&q=80", "features": ["UV Stable", "Outdoor Safe"] }
+			]
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

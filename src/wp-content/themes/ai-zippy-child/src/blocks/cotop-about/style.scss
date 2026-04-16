@@ -1,0 +1,156 @@
+$ctao-navy: var(--wp--preset--color--cotop-navy, #1b4181);
+$ctao-navy-dark: var(--wp--preset--color--cotop-navy-dark, #132e5e);
+$ctao-navy-mid: var(--wp--preset--color--cotop-navy-mid, #2a5298);
+$ctao-border: rgba(27, 65, 129, 0.12);
+$ctao-gold: var(--wp--preset--color--cotop-gold, #b8973a);
+$ctao-muted: var(--wp--preset--color--cotop-text-muted, #6b7fa8);
+$ctao-serif: var(--wp--preset--font-family--cotop-serif, "Cormorant Garamond", Georgia, serif);
+$ctao-sans: var(--wp--preset--font-family--cotop-sans, "DM Sans", system-ui, sans-serif);
+
+.wp-block-ai-zippy-cotop-about.ctao {
+	padding: 6rem 4rem;
+	background: #fff;
+	font-family: $ctao-sans;
+}
+
+.ctao__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
+	align-items: center;
+}
+
+.ctao__label {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	color: $ctao-gold;
+	font-size: 0.68rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+
+	&::before {
+		content: "";
+		display: block;
+		width: 28px;
+		height: 1px;
+		background: $ctao-gold;
+	}
+}
+
+.ctao__title {
+	margin: 0 0 1.5rem;
+	color: $ctao-navy-dark;
+	font-family: $ctao-serif;
+	font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+	font-weight: 300;
+	line-height: 1.15;
+	letter-spacing: 0;
+
+	em {
+		color: $ctao-navy-mid;
+		font-style: italic;
+	}
+}
+
+.ctao__body {
+	margin: 0;
+	color: $ctao-muted;
+	font-size: 0.9rem;
+	line-height: 1.9;
+}
+
+.ctao__body--spaced {
+	margin-top: 1rem;
+}
+
+.ctao__btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 2rem;
+	padding: 0.9rem 2.25rem;
+	background: $ctao-navy;
+	color: #fff;
+	font-size: 0.78rem;
+	letter-spacing: 0.1em;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover {
+		background: $ctao-navy-dark;
+		color: #fff;
+	}
+}
+
+.ctao__images {
+	position: relative;
+	height: 480px;
+}
+
+.ctao__img-main {
+	position: absolute;
+	inset: 0 60px 60px 0;
+	width: calc(100% - 60px);
+	height: calc(100% - 60px);
+	border: 1px solid $ctao-border;
+	object-fit: cover;
+}
+
+.ctao__img-inset {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 200px;
+	height: 185px;
+	border: 4px solid #fff;
+	object-fit: cover;
+}
+
+.ctao__badge {
+	position: absolute;
+	top: 1.5rem;
+	left: -1.5rem;
+	z-index: 2;
+	padding: 1.5rem 1.75rem;
+	background: $ctao-navy;
+	text-align: center;
+	font-family: $ctao-serif;
+}
+
+.ctao__badge-num {
+	display: block;
+	color: #fff;
+	font-size: 2rem;
+	font-weight: 300;
+	line-height: 1;
+}
+
+.ctao__badge-label {
+	color: rgba(255, 255, 255, 0.65);
+	font-size: 0.58rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+	.ctao__grid {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.wp-block-ai-zippy-cotop-about.ctao {
+		padding: 3.5rem 1.5rem;
+	}
+
+	.ctao__images {
+		height: 300px;
+	}
+
+	.ctao__badge {
+		left: 0;
+	}
+}

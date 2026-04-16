@@ -1,0 +1,28 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-page-hero",
+	"version": "1.0.0",
+	"title": "CO-TOP Page Hero",
+	"category": "ai-zippy",
+	"icon": "cover-image",
+	"description": "Reusable CO-TOP inner page hero.",
+	"supports": {
+		"html": false,
+		"align": ["wide", "full"]
+	},
+	"attributes": {
+		"tagline": { "type": "string", "default": "Since 1994" },
+		"title": { "type": "string", "default": "Our Story," },
+		"emphasis": { "type": "string", "default": "Our Craft" },
+		"body": { "type": "string", "default": "Three decades of turning exceptional materials into spaces that endure." },
+		"note": { "type": "string", "default": "" },
+		"backgroundId": { "type": "number", "default": 0 },
+		"backgroundUrl": { "type": "string", "default": "https://images.unsplash.com/photo-1631889993959-41b4e9c6e3c5?w=1600&q=80" }
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

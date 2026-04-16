@@ -1,0 +1,110 @@
+$ctsvc-bg: var(--wp--preset--color--cotop-bg, #f4f6fa);
+$ctsvc-navy: var(--wp--preset--color--cotop-navy, #1b4181);
+$ctsvc-navy-dark: var(--wp--preset--color--cotop-navy-dark, #132e5e);
+$ctsvc-navy-tint: var(--wp--preset--color--cotop-navy-tint, #eef3fb);
+$ctsvc-border: rgba(27, 65, 129, 0.12);
+$ctsvc-border-mid: rgba(27, 65, 129, 0.22);
+$ctsvc-gold: var(--wp--preset--color--cotop-gold, #b8973a);
+$ctsvc-muted: var(--wp--preset--color--cotop-text-muted, #6b7fa8);
+$ctsvc-serif: var(--wp--preset--font-family--cotop-serif, "Cormorant Garamond", Georgia, serif);
+$ctsvc-sans: var(--wp--preset--font-family--cotop-sans, "DM Sans", system-ui, sans-serif);
+
+.wp-block-ai-zippy-cotop-services.ctsvc {
+	padding: 6rem 4rem;
+	background: $ctsvc-bg;
+	font-family: $ctsvc-sans;
+}
+
+.ctsvc__label {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	color: $ctsvc-gold;
+	font-size: 0.68rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+
+	&::before {
+		content: "";
+		width: 28px;
+		height: 1px;
+		background: $ctsvc-gold;
+	}
+}
+
+.ctsvc__title {
+	margin: 0 0 1.5rem;
+	color: $ctsvc-navy-dark;
+	font-family: $ctsvc-serif;
+	font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+	font-weight: 300;
+	line-height: 1.15;
+	letter-spacing: 0;
+}
+
+.ctsvc__intro {
+	max-width: 520px;
+	margin: 0;
+	color: $ctsvc-muted;
+	font-size: 0.9rem;
+	line-height: 1.85;
+}
+
+.ctsvc__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1rem;
+	margin-top: 3rem;
+}
+
+.ctsvc__box {
+	padding: 2.5rem 2rem;
+	border: 1px solid $ctsvc-border;
+	background: #fff;
+	transition: border-color 0.2s, box-shadow 0.2s;
+
+	&:hover {
+		border-color: var(--wp--preset--color--cotop-navy-light, #4a72b8);
+		box-shadow: 0 4px 16px rgba(27, 65, 129, 0.07);
+	}
+
+	h4 {
+		margin: 0 0 0.65rem;
+		color: $ctsvc-navy-dark;
+		font-family: $ctsvc-serif;
+		font-size: 1.1rem;
+		font-weight: 400;
+	}
+
+	p {
+		margin: 0;
+		color: $ctsvc-muted;
+		font-size: 0.8rem;
+		line-height: 1.8;
+	}
+}
+
+.ctsvc__tag {
+	display: inline-block;
+	margin-bottom: 1rem;
+	padding: 0.25rem 0.6rem;
+	border: 1px solid $ctsvc-border-mid;
+	background: $ctsvc-navy-tint;
+	color: $ctsvc-navy;
+	font-size: 0.6rem;
+	letter-spacing: 0.15em;
+	text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+	.ctsvc__grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 768px) {
+	.wp-block-ai-zippy-cotop-services.ctsvc {
+		padding: 3.5rem 1.5rem;
+	}
+}

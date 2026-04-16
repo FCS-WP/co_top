@@ -1,0 +1,112 @@
+$ctsrc-navy-dark: var(--wp--preset--color--cotop-navy-dark, #132e5e);
+$ctsrc-navy-pale: var(--wp--preset--color--cotop-navy-pale, #d8e4f5);
+$ctsrc-border: rgba(27, 65, 129, 0.12);
+$ctsrc-gold: var(--wp--preset--color--cotop-gold, #b8973a);
+$ctsrc-muted: var(--wp--preset--color--cotop-text-muted, #6b7fa8);
+$ctsrc-serif: var(--wp--preset--font-family--cotop-serif, "Cormorant Garamond", Georgia, serif);
+$ctsrc-sans: var(--wp--preset--font-family--cotop-sans, "DM Sans", system-ui, sans-serif);
+
+.wp-block-ai-zippy-cotop-sourcing.ctsrc {
+	padding: 6rem 4rem;
+	background: #fff;
+	font-family: $ctsrc-sans;
+}
+
+.ctsrc__label {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	color: $ctsrc-gold;
+	font-size: 0.68rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+
+	&::before {
+		content: "";
+		width: 28px;
+		height: 1px;
+		background: $ctsrc-gold;
+	}
+}
+
+.ctsrc__title {
+	margin: 0;
+	color: $ctsrc-navy-dark;
+	font-family: $ctsrc-serif;
+	font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+	font-weight: 300;
+	line-height: 1.15;
+	letter-spacing: 0;
+}
+
+.ctsrc__grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5rem;
+	align-items: center;
+	margin-top: 3rem;
+}
+
+.ctsrc__image {
+	width: 100%;
+	height: 420px;
+	border: 1px solid $ctsrc-border;
+	object-fit: cover;
+}
+
+.ctsrc__points {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.ctsrc__point {
+	display: flex;
+	gap: 1.25rem;
+	align-items: flex-start;
+	padding-bottom: 2rem;
+	border-bottom: 1px solid $ctsrc-border;
+
+	&:last-child {
+		padding-bottom: 0;
+		border-bottom: 0;
+	}
+
+	h4 {
+		margin: 0 0 0.4rem;
+		color: $ctsrc-navy-dark;
+		font-family: $ctsrc-serif;
+		font-size: 1.05rem;
+		font-weight: 400;
+	}
+
+	p {
+		margin: 0;
+		color: $ctsrc-muted;
+		font-size: 0.82rem;
+		line-height: 1.8;
+	}
+}
+
+.ctsrc__num {
+	flex-shrink: 0;
+	color: $ctsrc-navy-pale;
+	font-family: $ctsrc-serif;
+	font-size: 1.8rem;
+	font-weight: 300;
+	line-height: 1;
+}
+
+@media (max-width: 1024px) {
+	.ctsrc__grid {
+		grid-template-columns: 1fr;
+		gap: 3rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.wp-block-ai-zippy-cotop-sourcing.ctsrc {
+		padding: 3.5rem 1.5rem;
+	}
+}

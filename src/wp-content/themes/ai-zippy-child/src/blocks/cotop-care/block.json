@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "ai-zippy/cotop-care",
+	"version": "1.0.0",
+	"title": "CO-TOP Care Guides",
+	"category": "ai-zippy",
+	"icon": "shield",
+	"description": "CO-TOP care and maintenance cards.",
+	"supports": { "html": false, "align": ["wide", "full"] },
+	"attributes": {
+		"label": { "type": "string", "default": "Care & Maintenance" },
+		"title": { "type": "string", "default": "Protecting Your Investment" },
+		"body": { "type": "string", "default": "All surfaces perform best when cared for correctly. Download our maintenance guides or speak to our team for personalised advice." },
+		"items": {
+			"type": "array",
+			"default": [
+				{ "icon": "shield", "title": "Solid Surface Maintenance Guide", "body": "Learn how to clean, maintain, and repair your solid surface. Minor scratches can be sanded out — extending the life of your surface indefinitely.", "link": "Download Guide →", "url": "#" },
+				{ "icon": "clock", "title": "Quartz Surface Maintenance Guide", "body": "Quartz is low-maintenance by nature, but certain chemicals and extreme heat can cause damage. Our guide covers what to avoid and how to clean effectively.", "link": "Download Guide →", "url": "#" },
+				{ "icon": "heart", "title": "Sintered Stone Care Tips", "body": "Sintered stone is virtually maintenance-free, but proper sealing and correct cleaning products ensure it stays pristine for decades.", "link": "Download Guide →", "url": "#" },
+				{ "icon": "phone", "title": "Speak to Our Specialists", "body": "Not sure how to handle a specific issue? Our after-sales team is available to advise on maintenance, repairs, and restoration for any CO-TOP surface.", "link": "Contact Us →", "url": "#" }
+			]
+		}
+	},
+	"textdomain": "ai-zippy",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

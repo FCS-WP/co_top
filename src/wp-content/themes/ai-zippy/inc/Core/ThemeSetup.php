@@ -28,6 +28,8 @@ class ThemeSetup
         add_theme_support('editor-styles');
         add_theme_support('woocommerce');
         add_theme_support('responsive-embeds');
+        //
+        add_action('wp_enqueue_scripts', 'wp_enqueue_global_styles', 1);
     }
 
     /**
@@ -35,15 +37,47 @@ class ThemeSetup
      */
     public static function registerBlocks(): void
     {
-        $blocks_dir = AI_ZIPPY_THEME_DIR . '/assets/blocks';
+        $block_json_files = self::getBlockJsonFiles(AI_ZIPPY_THEME_DIR . '/assets/blocks');
+        $child_blocks_dir = get_stylesheet_directory() . '/assets/blocks';
 
-        if (!is_dir($blocks_dir)) {
-            return;
+        if ($child_blocks_dir !== AI_ZIPPY_THEME_DIR . '/assets/blocks') {
+            $block_json_files = array_merge(
+                $block_json_files,
+                self::getBlockJsonFiles($child_blocks_dir)
+            );
         }
 
-        foreach (glob($blocks_dir . '/*/block.json') as $block_json) {
+        foreach ($block_json_files as $block_json) {
             register_block_type(dirname($block_json));
         }
+    }
+
+    /**
+     * Get block.json files keyed by block name so child blocks can override parent blocks.
+     */
+    private static function getBlockJsonFiles(string $blocks_dir): array
+    {
+        if (!is_dir($blocks_dir)) {
+            return [];
+        }
+
+        $block_json_files = [];
+        $block_json_paths = glob($blocks_dir . '/*/block.json');
+
+        if ($block_json_paths === false) {
+            return [];
+        }
+
+        foreach ($block_json_paths as $block_json) {
+            $metadata = json_decode((string) file_get_contents($block_json), true);
+            $block_name = is_array($metadata) && !empty($metadata['name'])
+                ? (string) $metadata['name']
+                : basename(dirname($block_json));
+
+            $block_json_files[$block_name] = $block_json;
+        }
+
+        return $block_json_files;
     }
 
     /**

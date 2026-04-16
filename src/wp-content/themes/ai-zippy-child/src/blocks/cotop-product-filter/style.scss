@@ -1,0 +1,101 @@
+$ctpf-navy: var(--wp--preset--color--cotop-navy, #1b4181);
+$ctpf-muted: var(--wp--preset--color--cotop-text-muted, #6b7fa8);
+$ctpf-border: rgba(27, 65, 129, 0.12);
+$ctpf-sans: var(--wp--preset--font-family--cotop-sans, "DM Sans", system-ui, sans-serif);
+
+.wp-site-blocks > .wp-block-ai-zippy-cotop-product-filter.ctpf {
+	margin-block-start: 0 !important;
+}
+
+.wp-block-ai-zippy-cotop-product-filter.ctpf {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 0;
+	width: 100%;
+	max-width: 100%;
+	padding: 0 clamp(1rem, 3vw, 4rem);
+	border-bottom: 2px solid $ctpf-border;
+	background: #fff;
+	box-shadow: 0 2px 12px rgba(27, 65, 129, 0.05);
+	font-family: $ctpf-sans;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: none;
+
+	&::-webkit-scrollbar {
+		display: none;
+	}
+}
+
+body.has-stuck-header {
+	.wp-block-ai-zippy-cotop-product-filter.ctpf {
+		top: var(--cotop-header-height, 5rem);
+	}
+}
+
+body.admin-bar {
+	.wp-block-ai-zippy-cotop-product-filter.ctpf {
+		top: 32px;
+	}
+}
+
+body.admin-bar.has-stuck-header {
+	.wp-block-ai-zippy-cotop-product-filter.ctpf {
+		top: calc(var(--cotop-header-height, 5rem) + 32px);
+	}
+}
+
+.ctpf__btn {
+	margin-bottom: -2px;
+	padding: 1.1rem 1.5rem;
+	border: 0;
+	border-bottom: 2px solid transparent;
+	background: transparent;
+	color: $ctpf-muted;
+	font-size: 0.72rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	white-space: nowrap;
+	transition: color 0.2s, border-color 0.2s;
+
+	&:hover,
+	&.is-active {
+		color: $ctpf-navy;
+		border-bottom-color: $ctpf-navy;
+	}
+
+	&.is-active {
+		font-weight: 500;
+	}
+}
+
+@media (max-width: 1024px) {
+	.wp-block-ai-zippy-cotop-product-filter.ctpf {
+		justify-content: flex-start;
+	}
+}
+
+@media (max-width: 768px) {
+	.wp-block-ai-zippy-cotop-product-filter.ctpf {
+		padding: 0 1.5rem;
+	}
+}
+
+@media (max-width: 782px) {
+	body.admin-bar {
+		.wp-block-ai-zippy-cotop-product-filter.ctpf {
+			top: 46px;
+		}
+	}
+
+	body.admin-bar.has-stuck-header {
+		.wp-block-ai-zippy-cotop-product-filter.ctpf {
+			top: calc(var(--cotop-header-height, 5rem) + 46px);
+		}
+	}
+}

@@ -1,0 +1,82 @@
+$ctcli-bg: var(--wp--preset--color--cotop-navy-pale, #d8e4f5);
+$ctcli-navy: var(--wp--preset--color--cotop-navy, #1b4181);
+$ctcli-navy-dark: var(--wp--preset--color--cotop-navy-dark, #132e5e);
+$ctcli-text-mid: var(--wp--preset--color--cotop-text-mid, #2e4472);
+$ctcli-gold: var(--wp--preset--color--cotop-gold, #b8973a);
+$ctcli-serif: var(--wp--preset--font-family--cotop-serif, "Cormorant Garamond", Georgia, serif);
+$ctcli-sans: var(--wp--preset--font-family--cotop-sans, "DM Sans", system-ui, sans-serif);
+
+.wp-block-ai-zippy-cotop-clients.ctcli {
+	padding: 6rem 4rem;
+	background: $ctcli-bg;
+	font-family: $ctcli-sans;
+}
+
+.ctcli__label {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	color: $ctcli-gold;
+	font-size: 0.68rem;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+
+	&::before {
+		content: "";
+		width: 28px;
+		height: 1px;
+		background: $ctcli-gold;
+	}
+}
+
+.ctcli__title {
+	margin: 0 0 1.5rem;
+	color: $ctcli-navy-dark;
+	font-family: $ctcli-serif;
+	font-size: clamp(1.9rem, 3.6vw, 3.2rem);
+	font-weight: 300;
+	line-height: 1.15;
+	letter-spacing: 0;
+}
+
+.ctcli__body {
+	max-width: 480px;
+	margin: 0;
+	color: $ctcli-text-mid;
+	font-size: 0.9rem;
+	line-height: 1.85;
+}
+
+.ctcli__logos {
+	display: flex;
+	gap: 1rem;
+	flex-wrap: wrap;
+	margin-top: 2.5rem;
+}
+
+.ctcli__logo {
+	display: inline-flex;
+	align-items: center;
+	min-height: 42px;
+	padding: 1rem 1.75rem;
+	border: 1px solid rgba(27, 65, 129, 0.14);
+	background: rgba(27, 65, 129, 0.08);
+	color: $ctcli-navy;
+	font-size: 0.72rem;
+	font-weight: 500;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	transition: background 0.2s, color 0.2s;
+
+	&:hover {
+		background: $ctcli-navy;
+		color: #fff;
+	}
+}
+
+@media (max-width: 768px) {
+	.wp-block-ai-zippy-cotop-clients.ctcli {
+		padding: 3.5rem 1.5rem;
+	}
+}

@@ -1,29 +1,34 @@
 <?php
 
 /**
- * AI Zippy Child Theme Functions
+ * AI Zippy Child Theme Functions.
  *
- * Add project-specific customizations here.
- * The parent theme (ai-zippy) handles Vite assets and core setup.
+ * Bootstrap file: auto-load all PHP files inside /inc.
  */
 
 defined('ABSPATH') || exit;
 
-/**
- * Enqueue child theme styles after parent.
- */
-function ai_zippy_child_enqueue_assets(): void
-{
-    // Child theme custom styles (only if file exists)
-    $child_css = get_stylesheet_directory() . '/assets/dist/css/style.css';
+define('AI_ZIPPY_CHILD_THEME_DIR', get_stylesheet_directory());
+define('AI_ZIPPY_CHILD_THEME_URI', get_stylesheet_directory_uri());
 
-    if (file_exists($child_css)) {
-        wp_enqueue_style(
-            'ai-zippy-child-style',
-            get_stylesheet_directory_uri() . '/assets/dist/css/style.css',
-            ['ai-zippy-theme-css-0'],
-            filemtime($child_css)
-        );
+$inc_dir = AI_ZIPPY_CHILD_THEME_DIR . '/inc';
+
+if (is_dir($inc_dir)) {
+    $iterator = new RecursiveIteratorIterator(
+        new RecursiveDirectoryIterator($inc_dir, FilesystemIterator::SKIP_DOTS)
+    );
+
+    $php_files = [];
+
+    foreach ($iterator as $file) {
+        if ($file->isFile() && strtolower($file->getExtension()) === 'php') {
+            $php_files[] = $file->getPathname();
+        }
+    }
+
+    sort($php_files);
+
+    foreach ($php_files as $php_file) {
+        require_once $php_file;
     }
 }
-add_action('wp_enqueue_scripts', 'ai_zippy_child_enqueue_assets', 20);
